@@ -24,6 +24,10 @@
   justify-content: center;
 }
 
+.gb {
+  padding-top: 2.5%;
+}
+
 .sub-container {
   padding: 5rem 5vw 5rem;
   background-color: rgba(242, 112, 89, 1);
@@ -32,6 +36,7 @@
   flex-direction: column;
   text-align: center;
   width: 75%;
+  align-items: center;
   /*line-height: 100px;*/
 }
 
@@ -41,9 +46,18 @@
   justify-content: space-between;
 }
 
-.hand {
-  transition: all 300ms;
-  transition-timing-function: cubic-bezier(0, 1.51, 1, 1);
+.hand-img {
+  width: 25%;
+  transition: all 250ms;
+  transition-timing-function: cubic-bezier(
+    0.95,
+    -0.28,
+    0.75,
+    0.13
+  ); /*0, 1.51, 1, 1*/
+  position: absolute;
+  top: 200px;
+  left: 260px;
 }
 
 .trump {
@@ -54,7 +68,7 @@
   padding-bottom: 4rem;
 }
 
-.img {
+.img-div {
   cursor: pointer;
 }
 
@@ -65,7 +79,12 @@
 }
 
 .game-board {
-  /*background-image: url()*/
+  background-image: url(./938635868-612x612.jpg);
+  position: relative;
+  width: 700px;
+  height: 513px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .links-credits {
