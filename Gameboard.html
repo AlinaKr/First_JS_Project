@@ -13,25 +13,38 @@
 </head>
 
 <body>
-    <div class="main-container gb">
-        <div class="game-container">
-            <div class="left-container">
-                <img class="left-container-img" src="./TrumpStart.gif" alt="playerone">
-                <p class="instructions-left"></p>
-            </div>
-            <div class="game-board">
-                <!-- <div class="hand"> -->
-                <img class="hand-img" src="./takethishand.png" alt="hand">
-                <!-- </div> -->
-            </div>
-            <div class="right-container">
-                <img class="right-container-img" src="./Jong-unStart.gif" alt="playertwo">
-                <p class="instructions-right"></p>
+    <div class="animated-container2">
+        <div class="main-container gb">
+            <div class="game-container">
+                <div class="left-container">
+                    <img id="left-container-img" class="round" src="" alt="playerone">
+                    <p class="instructions-left"></p>
+                </div>
+                <div class="game-board">
+                    <!-- <div class="hand"> -->
+                    <img class="hand-img" src="./takethishand.png" alt="hand">
+                    <div class="awkward-gifs">
+                        <img class="us-win 1" src="./US_Win/handshake1.gif" alt="hand">
+                        <img class="us-win 2" src="./US_Win/handshake2.gif" alt="hand">
+                        <img class="us-win 3" src="./US_Win/handshake3.gif" alt="hand">
+                        <img class="us-win 4" src="./US_Win/handshake4.gif" alt="hand">
+                        <img class="us-win 4" src="./US_Win/handshake5.gif" alt="hand">
+                        <img class="us-win 4" src="./US_Win/handshake6.gif" alt="hand">
+                    </div>
+                    <!-- </div> -->
+                </div>
+                <div class="right-container">
+                    <img id="right-container-img" class="round" src="" alt="playertwo">
+                    <p class="instructions-right"></p>
+                </div>
             </div>
         </div>
-        <div class="links-credits"></div>
+        <div class="links-credits">
+            <button class="button-try" type="button">TRY AGAIN</button>
+            <button class="button-back" type="button">GO BACK</button>
+        </div>
     </div>
-
+    </div>
     <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 
     <script src="./main.js" type="text/javascript"></script>
