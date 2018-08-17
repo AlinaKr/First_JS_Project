@@ -1,12 +1,9 @@
 
 
-function Player(name, direction) {
+function Player(name) {
     this.name = name;
-    this.direction = direction;
     this.keytoPress = "";
-    this.distanceTowardsWin = 6;
     this.hasWon = false;
-    this.blocked = false;
 }
 
 

@@ -73,13 +73,14 @@ h1{
 }
 
 .sub-container {
-  padding: 5rem 5vw 5rem;
+  padding: 2.5rem 5vw 1rem;   /*5rem 5vw 5rem;*/
   background-color: rgba(242, 112, 89, 1);
-  border-radius: 20px;
+  border-radius: 30px;
   display: flex;
   flex-direction: column;
   text-align: center;
-  width: 75%;
+  width: 60%;
+  height: 30em;
   align-items: center;
   /*line-height: 100px;*/
 }
@@ -105,11 +106,16 @@ h1{
 }
 
 .trump {
-  padding-bottom: 4rem;
+  padding-bottom: 2rem;   /*4*/
+  width: 27%;
 }
 
 .VS {
-  padding-bottom: 4rem;
+  padding-bottom: 3rem;
+}
+
+h2{
+  font-weight: 900;
 }
 
 .img-div {
@@ -181,6 +187,9 @@ button:hover {
 
 .round{
   border-radius: 200px;
+  width: 80%;
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
 .animated-container{

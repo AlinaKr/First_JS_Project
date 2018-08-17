@@ -7,28 +7,12 @@ function Game(playerFirst, playerSecond) {
 
 Game.prototype.initialiseGifs = function () {
     var imgLeft = $("#left-container-img");
-    imgLeft.attr("src", "./Trump_0.gif");
-    if (this.playerSecond.name === "Jong-un") {
-        var imgRight = $("#right-container-img");
-        imgRight.attr("src", "./Jong-un_0.gif");
-    }
-    else if (this.playerSecond.name === "Merkel") {
-        var imgRight = $("#right-container-img");
-        imgRight.attr("src", "./Merkel_0.gif");
-    }
-    else if (this.playerSecond.name === "Putin") {
-        var imgRight = $("#right-container-img");
-        imgRight.attr("src", "./Putin_0.gif");
-    }
-    else if (this.playerSecond.name === "Macron") {
-        var imgRight = $("#right-container-img");
-        imgRight.attr("src", "./Macron_0.gif");
-    }
+    imgLeft.attr("src", "./Gifs/Trump_0.gif");
+    var imgRight = $("#right-container-img");
+    imgRight.attr("src", "./Gifs/" + this.playerSecond.name + "_0.gif");  //++
 }
 
 Game.prototype.moveRight = function () {
-    //secondPlayer.distanceTowardsWin -= 1;
-    //firstPlayer.distanceTowardsWin += 1;
     var leftValue = $(".hand-img").css("left");
     leftValue = leftValue.substring(0, leftValue.length - 2);
     leftValue = parseInt(leftValue);
@@ -39,16 +23,12 @@ Game.prototype.moveRight = function () {
 
 //move hand left
 Game.prototype.moveLeft = function () {
-    //secondPlayer.distanceTowardsWin -= 1;
-    //firstPlayer.distanceTowardsWin += 1;
     var leftValue = $(".hand-img").css("left");
     leftValue = leftValue.substring(0, leftValue.length - 2);
     leftValue = parseInt(leftValue);
     leftValue -= 65;
     $(".hand-img").css("left", leftValue + "px");
     this.positionHand -= 1;
-    //   or Trump instance firstPlayer.distanceTowardsWin -= 1;
-    //secondPlayer.distanceTowardsWin += 1;
 };
 
 Game.prototype.isGameWon = function () {
@@ -63,29 +43,29 @@ Game.prototype.updateGifs = function () {
 
     if (this.positionHand === 2) {
         var imgRight = $("#right-container-img");
-        imgRight.attr("src", "./" + this.playerSecond.name + "_2.gif");
+        imgRight.attr("src", "./Gifs/" + this.playerSecond.name + "_2.gif");   //++
         var imgLeft = $("#left-container-img");
-        imgLeft.attr("src", "./Trump_2.gif");
+        imgLeft.attr("src", "./Gifs/Trump_2.gif");   //++
     } else if (this.positionHand === 4) {
         var imgRight = $("#right-container-img");
-        imgRight.attr("src", "./" + this.playerSecond.name + "_4.gif");
+        imgRight.attr("src", "./Gifs/" + this.playerSecond.name + "_4.gif");  //++
         var imgLeft = $("#left-container-img");
-        imgLeft.attr("src", "./Trump_4.gif");
+        imgLeft.attr("src", "./Gifs/Trump_4.gif");   //++
     } else if (this.positionHand === -4) {
         var imgRight = $("#right-container-img");
-        imgRight.attr("src", "./" + this.playerSecond.name + "_-4.gif");
+        imgRight.attr("src", "./Gifs/" + this.playerSecond.name + "_-4.gif");   //++
         var imgLeft = $("#left-container-img");
-        imgLeft.attr("src", "./Trump_-4.gif");
+        imgLeft.attr("src", "./Gifs/Trump_-4.gif");   //++
     } else if (this.positionHand === -2) {
         var imgRight = $("#right-container-img");
-        imgRight.attr("src", "./" + this.playerSecond.name + "_-2.gif");
+        imgRight.attr("src", "./Gifs/" + this.playerSecond.name + "_-2.gif");    //++
         var imgLeft = $("#left-container-img");
-        imgLeft.attr("src", "./Trump_-2.gif");
+        imgLeft.attr("src", "./Gifs/Trump_-2.gif");   //++
     } else if (this.positionHand === 0) {
         var imgLeft = $("#left-container-img");
-        imgLeft.attr("src", "./Trump_0.gif");
+        imgLeft.attr("src", "./Gifs/Trump_0.gif");    //++
         var imgRight = $("#right-container-img");
-        imgRight.attr("src", "./" + this.playerSecond.name + "_0.gif");
+        imgRight.attr("src", "./Gifs/" + this.playerSecond.name + "_0.gif");  //++
     }
 };
 
@@ -95,7 +75,6 @@ Game.prototype.updateBoardWin = function () {
     this.playerFirst.keytoPress = -1;
     this.playerSecond.keytoPress = -1;
     if (this.playerFirst.hasWon) {
-        ///add container mit you won und den links display: yes
         $(".game-board").css({
             "background-image": "none",
             "transition": "background-image 1s"
