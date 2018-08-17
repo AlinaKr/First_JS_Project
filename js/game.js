@@ -101,6 +101,9 @@ Game.prototype.updateKeys = function () {
 }
 
 Game.prototype.updateBoard = function (player) {
+    if (this.playerFirst.hasWon || this.playerSecond.hasWon) {    /////-----
+        return;
+    }
     if (player === this.playerFirst) {
         this.moveLeft();
     }
