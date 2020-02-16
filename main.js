@@ -57,7 +57,7 @@ $(document).ready(function () {
       playerRight.hasWon = false;
     }
     else {
-      window.location.href = './Start_ChoosePlayer.html';
+      window.location.href = './index.html';
     }
   });
 
