@@ -6,9 +6,6 @@ var newGame;
 $(document).ready(function () {
   $(".img-div").on('click', function () {
     playerName = this.getAttribute('id');
-    // playerName = $(this).attr('id');
-    // playerName = this.id;
-    // $("body").fadeOut(1000);
     $(".animated-container").css("opacity", "0");
     playerRight = new Player(playerName);
     playerLeft = new Player("Trump");
@@ -18,8 +15,6 @@ $(document).ready(function () {
       newGame = new Game(playerLeft, playerRight);
       newGame.initialiseGifs();
     }, 1000);
-    // $("body").css("display", "none");
-    // $("body").fadeIn(1000);
   });
 
 
@@ -45,10 +40,10 @@ $(document).ready(function () {
       });
       $('.awkward-gifs').css("display", "none");
       newGame.positionHand = 0;
-      $("#right-container-img").attr("src", "./Gifs/" + playerRight.name + "_0.gif"); //++
-      $("#left-container-img").attr("src", "./Gifs/Trump_0.gif");   //++
+      $("#right-container-img").attr("src", "./img/gifs/" + playerRight.name + "_0.gif"); //++
+      $("#left-container-img").attr("src", "./img/gifs/Trump_0.gif");   //++
       $(".game-board").css({
-        "background-image": "url(./938635868-612x612.jpg)",
+        "background-image": "url(./img/fight-ring.jpg)",
         "transition": "color 0s"
       });
       playerLeft.updateKeys();
@@ -65,7 +60,7 @@ $(document).ready(function () {
     if (e.which === parseInt(playerLeft.keytoPress)) {
       newGame.updateBoard(playerLeft);
     }
-    else if (playerLeft.keysArraykeys.includes(e.which)) {    ///keysLeftKeys.includes(e.which)
+    else if (playerLeft.keysArraykeys.includes(e.which)) {
       newGame.updateBoard(playerRight);
     }
     else if (e.which === parseInt(playerRight.keytoPress)) {

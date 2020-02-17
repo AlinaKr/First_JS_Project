@@ -7,9 +7,9 @@ function Game(playerFirst, playerSecond) {
 
 Game.prototype.initialiseGifs = function () {
     var imgLeft = $("#left-container-img");
-    imgLeft.attr("src", "./Gifs/Trump_0.gif");
+    imgLeft.attr("src", "./img/gifs/Trump_0.gif");
     var imgRight = $("#right-container-img");
-    imgRight.attr("src", "./Gifs/" + this.playerSecond.name + "_0.gif");  //++
+    imgRight.attr("src", "./img/gifs/" + this.playerSecond.name + "_0.gif");  //++
 }
 
 Game.prototype.moveRight = function () {
@@ -43,29 +43,29 @@ Game.prototype.updateGifs = function () {
 
     if (this.positionHand === 2) {
         var imgRight = $("#right-container-img");
-        imgRight.attr("src", "./Gifs/" + this.playerSecond.name + "_2.gif");   //++
+        imgRight.attr("src", "./img/gifs/" + this.playerSecond.name + "_2.gif");   //++
         var imgLeft = $("#left-container-img");
-        imgLeft.attr("src", "./Gifs/Trump_2.gif");   //++
+        imgLeft.attr("src", "./img/gifs/Trump_2.gif");   //++
     } else if (this.positionHand === 4) {
         var imgRight = $("#right-container-img");
-        imgRight.attr("src", "./Gifs/" + this.playerSecond.name + "_4.gif");  //++
+        imgRight.attr("src", "./img/gifs/" + this.playerSecond.name + "_4.gif");  //++
         var imgLeft = $("#left-container-img");
-        imgLeft.attr("src", "./Gifs/Trump_4.gif");   //++
+        imgLeft.attr("src", "./img/gifs/Trump_4.gif");   //++
     } else if (this.positionHand === -4) {
         var imgRight = $("#right-container-img");
-        imgRight.attr("src", "./Gifs/" + this.playerSecond.name + "_-4.gif");   //++
+        imgRight.attr("src", "./img/gifs/" + this.playerSecond.name + "_-4.gif");   //++
         var imgLeft = $("#left-container-img");
-        imgLeft.attr("src", "./Gifs/Trump_-4.gif");   //++
+        imgLeft.attr("src", "./img/gifs/Trump_-4.gif");   //++
     } else if (this.positionHand === -2) {
         var imgRight = $("#right-container-img");
-        imgRight.attr("src", "./Gifs/" + this.playerSecond.name + "_-2.gif");    //++
+        imgRight.attr("src", "./img/gifs/" + this.playerSecond.name + "_-2.gif");    //++
         var imgLeft = $("#left-container-img");
-        imgLeft.attr("src", "./Gifs/Trump_-2.gif");   //++
+        imgLeft.attr("src", "./img/gifs/Trump_-2.gif");   //++
     } else if (this.positionHand === 0) {
         var imgLeft = $("#left-container-img");
-        imgLeft.attr("src", "./Gifs/Trump_0.gif");    //++
+        imgLeft.attr("src", "./img/gifs/Trump_0.gif");    //++
         var imgRight = $("#right-container-img");
-        imgRight.attr("src", "./Gifs/" + this.playerSecond.name + "_0.gif");  //++
+        imgRight.attr("src", "./img/gifs/" + this.playerSecond.name + "_0.gif");  //++
     }
 };
 
@@ -82,16 +82,14 @@ Game.prototype.updateBoardWin = function () {
         $('.awkward-gifs').css("display", "-webkit-box");
         $(".instructions-left").text("YOU WON");
         $(".hand-img").css("display", "none");
-        //addClass( ".awkward-videos-container" );
     } else if (this.playerSecond.hasWon) {
         ///add container mit you won und den links display: yes
         $(".game-board").css({
-            "background-image": "url(./Flags/" + this.playerSecond.name + ".png)",
+            "background-image": "url(./img/flags/" + this.playerSecond.name + ".png)",
             "transition": "background-image 2s"
         });
         $(".instructions-right").text("YOU WON");
         $(".hand-img").css("display", "none");
-        //.addClass( ".sad-videos-container" );
     }
 };
 
@@ -101,7 +99,7 @@ Game.prototype.updateKeys = function () {
 }
 
 Game.prototype.updateBoard = function (player) {
-    if (this.playerFirst.hasWon || this.playerSecond.hasWon) {    /////-----
+    if (this.playerFirst.hasWon || this.playerSecond.hasWon) {
         return;
     }
     if (player === this.playerFirst) {
@@ -110,9 +108,7 @@ Game.prototype.updateBoard = function (player) {
     else {
         this.moveRight();
     }
-    //setTimeout(function () {
     this.updateGifs();
-    //}, 1000);
     if (this.isGameWon()) {
         if (player === this.playerFirst) {
             this.playerFirst.hasWon = true;

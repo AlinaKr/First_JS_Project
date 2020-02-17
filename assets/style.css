@@ -11,44 +11,6 @@ body {
     background-color: black;
 }
 
-/* -webkit-animation: scale-in-hor-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s both;
-animation: scale-in-hor-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s both;  */
-
-
-/* 
-@-webkit-keyframes animated-container {
-  0% {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-    -webkit-transform-origin: 0% 0%;
-            transform-origin: 0% 0%;
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-    -webkit-transform-origin: 0% 0%;
-            transform-origin: 0% 0%;
-    opacity: 1;
-  }
-}
-@keyframes animated-container {
-  0% {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-    -webkit-transform-origin: 0% 0%;
-            transform-origin: 0% 0%;
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-    -webkit-transform-origin: 0% 0%;
-            transform-origin: 0% 0%;
-    opacity: 1;
-  }
-} */
-
 .clearfix {
     clear: both;
 } 
@@ -69,11 +31,11 @@ h1{
 }
 
 .gb {
-  padding-top: 2%;   /*vorher2.5*/
+  padding-top: 2%; 
 }
 
 .sub-container {
-  padding: 2.5rem 5vw 1rem;   /*5rem 5vw 5rem;*/
+  padding: 2.5rem 5vw 1rem; 
   background-color:#1d435d;
   border-radius: 30px;
   display: flex;
@@ -83,7 +45,6 @@ h1{
   height: 30em;
   align-items: center;
   border: solid #a52a2a 5px;
-  /*line-height: 100px;*/
 }
 
 .opponents {
@@ -100,14 +61,14 @@ h1{
     -0.28,
     0.75,
     0.13
-  ); /*0, 1.51, 1, 1*/
+  ); 
   position: absolute;
   top: 200px;
   left: 260px;
 }
 
 .trump {
-  padding-bottom: 2rem;   /*4*/
+  padding-bottom: 2rem;
   width: 27%;
 }
 
@@ -130,7 +91,7 @@ h2{
 }
 
 .game-board {
-  background-image: url(./938635868-612x612.jpg);
+  background-image: url(../img/fight-ring.jpg);
   position: relative;
   width: 700px;
   height: 513px;
@@ -150,7 +111,7 @@ h2{
 }
 
 .awkward-gifs{
-  display: none;    /*-webkit-box*/
+  display: none;
   position: absolute;
   top: 5.5em;
 }
@@ -197,11 +158,6 @@ button:hover {
   opacity: 1;
   transition: opacity 1s ease-in;
 }
-
-/* .animated-container2{
-  opacity: 0;
-  transition: opacity 2s ease-in;
-}  */
 
 .level-container {
   display: flex;
