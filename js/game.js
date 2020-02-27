@@ -7,7 +7,7 @@ function Game(playerFirst, playerSecond) {
 
 Game.prototype.initialiseGifs = function () {
     var imgLeft = $("#left-container-img");
-    imgLeft.attr("src", "./img/gifs/Trump_0.gif");
+    imgLeft.attr("src", "./img/gifs/trump_0.gif");
     var imgRight = $("#right-container-img");
     imgRight.attr("src", "./img/gifs/" + this.playerSecond.name + "_0.gif");  //++
 }
@@ -45,25 +45,25 @@ Game.prototype.updateGifs = function () {
         var imgRight = $("#right-container-img");
         imgRight.attr("src", "./img/gifs/" + this.playerSecond.name + "_2.gif");   //++
         var imgLeft = $("#left-container-img");
-        imgLeft.attr("src", "./img/gifs/Trump_2.gif");   //++
+        imgLeft.attr("src", "./img/gifs/trump_2.gif");   //++
     } else if (this.positionHand === 4) {
         var imgRight = $("#right-container-img");
         imgRight.attr("src", "./img/gifs/" + this.playerSecond.name + "_4.gif");  //++
         var imgLeft = $("#left-container-img");
-        imgLeft.attr("src", "./img/gifs/Trump_4.gif");   //++
+        imgLeft.attr("src", "./img/gifs/trump_4.gif");   //++
     } else if (this.positionHand === -4) {
         var imgRight = $("#right-container-img");
         imgRight.attr("src", "./img/gifs/" + this.playerSecond.name + "_-4.gif");   //++
         var imgLeft = $("#left-container-img");
-        imgLeft.attr("src", "./img/gifs/Trump_-4.gif");   //++
+        imgLeft.attr("src", "./img/gifs/trump_-4.gif");   //++
     } else if (this.positionHand === -2) {
         var imgRight = $("#right-container-img");
         imgRight.attr("src", "./img/gifs/" + this.playerSecond.name + "_-2.gif");    //++
         var imgLeft = $("#left-container-img");
-        imgLeft.attr("src", "./img/gifs/Trump_-2.gif");   //++
+        imgLeft.attr("src", "./img/gifs/trump_-2.gif");   //++
     } else if (this.positionHand === 0) {
         var imgLeft = $("#left-container-img");
-        imgLeft.attr("src", "./img/gifs/Trump_0.gif");    //++
+        imgLeft.attr("src", "./img/gifs/trump_0.gif");    //++
         var imgRight = $("#right-container-img");
         imgRight.attr("src", "./img/gifs/" + this.playerSecond.name + "_0.gif");  //++
     }

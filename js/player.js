@@ -22,7 +22,7 @@ Player.prototype.pickRandomKey = function () {
 Player.prototype.updateKeys = function () {
     var nextKey = this.pickRandomKey();
     this.keytoPress = Object.keys(nextKey);
-    if (this.name === "Trump") {
+    if (this.name === "trump") {
         $(".instructions-left").text("Press " + Object.values(nextKey));
     } else {
         $(".instructions-right").text("Press " + Object.values(nextKey));

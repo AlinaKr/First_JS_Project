@@ -8,7 +8,7 @@ $(document).ready(function () {
     playerName = this.getAttribute('id');
     $(".animated-container").css("opacity", "0");
     playerRight = new Player(playerName);
-    playerLeft = new Player("Trump");
+    playerLeft = new Player("trump");
     setTimeout(function () {
       $("#first-screen").toggle();
       $("#second-screen").toggle();
@@ -41,7 +41,7 @@ $(document).ready(function () {
       $('.awkward-gifs').css("display", "none");
       newGame.positionHand = 0;
       $("#right-container-img").attr("src", "./img/gifs/" + playerRight.name + "_0.gif"); //++
-      $("#left-container-img").attr("src", "./img/gifs/Trump_0.gif");   //++
+      $("#left-container-img").attr("src", "./img/gifs/trump_0.gif");   //++
       $(".game-board").css({
         "background-image": "url(./img/fight-ring.jpg)",
         "transition": "color 0s"
